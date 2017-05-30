@@ -21,6 +21,9 @@ let server = http.createServer((req, res)=> {
     } else if (req.url == '/css/style.css'){
         res.writeHead(200, {'content-type': 'text/css'});
         var theHomePageHTML = fs.readFileSync('../../unit2/movie-app/css/style.css');
+    } else {
+        res.writeHead(404,{'content-type' : 'text/html'});
+        res.end("<h1>404 - Not Found</h1>");
     }
 
     res.end(theHomePageHTML);

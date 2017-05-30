@@ -10,7 +10,7 @@ let http = require("http");
 
 let server = http.createServer(function(request, response) {
     // console.log(request);
-    response.writeHead(418, {
+    response.writeHead(200, {
         'content-type': 'text/html'
     });
     response.write("<h1>Hello Visitor, this is YOUR node server.</h1>");
